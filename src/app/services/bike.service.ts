@@ -10,9 +10,18 @@ const httpOptions = {
 @Injectable()
 export class BikeService {
 
-  constructor( private http: HttpClient) { };
+  constructor( private http: HttpClient) { }
 
   getBikes() {
     return this.http.get('server/api/v1/bikes');
   }
+
+  getBike(id: number) {
+    return this.http.get('server/api/v1/bikes' + id);
+  }
+  createBikeRegistration(bike) {
+    const body = JSON.stringify(bike);
+    return this.http.post('server/api/v1/bikes', body, httpOptions);
+  }
+
 }
