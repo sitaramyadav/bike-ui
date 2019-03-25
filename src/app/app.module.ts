@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { BikeService } from './services/bike.service';
 import { AdminComponent} from './componeents/admin/admin.component';
 import { HomeComponent } from './componeents/home/home.component';
+import { ViewRegistrationComponent } from './componeents/view-registration/view-registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     HomeComponent,
+    ViewRegistrationComponent,
   ],
   imports: [
     BrowserModule,
