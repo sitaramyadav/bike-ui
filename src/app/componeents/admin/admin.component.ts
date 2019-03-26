@@ -7,7 +7,7 @@ import {BikeService} from '../../services/bike.service';
   styleUrls: ['./admin.component.sass']
 })
 export class AdminComponent implements OnInit {
-  public bikeService;
+  public bikeService: BikeService;
 
   constructor(private bikeService: BikeService) {
   }

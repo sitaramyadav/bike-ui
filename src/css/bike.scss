@@ -23,3 +23,8 @@ h1 {
 .table-bordered, .table-bordered td, .table-bordered th {
   border: 1px solid #2F465D;
 }
+
+.form-control {
+  display: -webkit-box;
+  width: 100%;
+}
