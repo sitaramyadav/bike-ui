@@ -20,6 +20,10 @@ h1 {
   font-size: 2.0em;
 }
 
+h3{
+  text-align: center;
+}
+
 .table-bordered, .table-bordered td, .table-bordered th {
   border: 1px solid #2F465D;
 }
@@ -27,4 +31,10 @@ h1 {
 .form-control {
   display: -webkit-box;
   width: 100%;
+
 }
+.form-group {
+  margin-right: 20px;
+  margin-left: 40px;
+}
+
