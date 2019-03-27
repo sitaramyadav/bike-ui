@@ -12,11 +12,20 @@ export class BikeService {
   constructor( private http: HttpClient) { }
 
   getBikes() {
-    return this.http.get('server/api/v1/bikes');
+    // Todo: Need to test if there is any problem with const because author used let instead of const.
+    const token = localStorage.getItem('access_token');
+    return this.http.get('server/api/v1/bikes',
+    {headers: new HttpHeaders().set('Authorization', 'Bearer' + token)}
+    );
   }
 
   getBike(id: number) {
-    return this.http.get('server/api/v1/bikes' + id);
+    // Todo: Need to test if there is any problem with const because author used let instead of const.
+    const token = localStorage.getItem('access_token');
+
+    return this.http.get('server/api/v1/bikes' + id,
+      {headers: new HttpHeaders().set('Authorization', 'Bearer' + token)}
+    );
   }
   createBikeRegistration(bike) {
     const body = JSON.stringify(bike);

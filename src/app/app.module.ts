@@ -10,6 +10,8 @@ import { AdminComponent} from './componeents/admin/admin.component';
 import { HomeComponent } from './componeents/home/home.component';
 import { ViewRegistrationComponent } from './componeents/view-registration/view-registration.component';
 import { CallbackComponent } from './componeents/callback/callback.component';
+import { AuthService} from './services/auth0.service';
+import { AuthGuardService} from './services/auth.guard.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { CallbackComponent } from './componeents/callback/callback.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [BikeService],
+  providers: [BikeService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
